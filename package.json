@@ -1,0 +1,24 @@
+{
+  "name": "learnnode",
+  "version": "1.0.0",
+  "description": "first steps in node",
+  "main": "index.js",
+  "dependencies": {
+    "http": "0.0.1-security"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016\u0016https://github.com/jenja-pa/bs-2020-class-node.git"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "express"
+  ],
+  "author": "jenja",
+  "license": "MIT"
+}
