@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
 
-app.get("/", (req, res) =>{
+app.get("/:route", (req, res) =>{
   console.log(`Обробка GET: ${req.url}`);
+  console.log("query:", req.query.a);
+  console.log("params:", req.params.route);
   res.send("Hello World");
 });
 app.get("/test", (req, res) =>{
