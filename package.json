@@ -4,6 +4,7 @@
   "description": "first steps in node",
   "main": "index.js",
   "dependencies": {
+    "html": "^1.0.0",
     "http": "0.0.1-security"
   },
   "devDependencies": {},
