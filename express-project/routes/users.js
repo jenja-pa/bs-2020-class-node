@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const { getName } = require("../services/user.services");
+const { getName, saveName } = require("../services/user.services");
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -11,9 +11,9 @@ router.get('/', function(req, res, next) {
 /* POST users listing. */
 
 router.post('/', function(req, res, next) {
-  const name = getName(req.body);
-  if (name){
-    res.send(`Your name is ${name}`);
+  const result = saveName(req.body);
+  if (result){
+    res.send(`Your data (${getName(req.body)}) is saved. Result: ${result}`);
   }else{
     res.status(404).send("Some error");
   }
