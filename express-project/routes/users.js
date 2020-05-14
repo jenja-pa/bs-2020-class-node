@@ -8,9 +8,9 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource: ' + req.url);
 });
 
+const {isAutorized} = require("../middlewares/auth.middlewares");
 /* POST users listing. */
-
-router.post('/', function(req, res, next) {
+router.post('/', isAutorized, function(req, res, next) {
   const result = saveName(req.body);
   if (result){
     res.send(`Your data (${getName(req.body)}) is saved. Result: ${result}`);
